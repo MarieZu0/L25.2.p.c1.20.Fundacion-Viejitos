@@ -7,7 +7,7 @@ export default class Cl_fundacion {
     private _cntDonador2: number;
     private _cntDonador3: number;
     private _cntDonador4: number;
-    private _mayDonador: number;
+
 
     constructor(){
         this._acumDolares = 0;
@@ -16,7 +16,6 @@ export default class Cl_fundacion {
         this._cntDonador2 = 0;
         this._cntDonador3 = 0;
         this._cntDonador4 = 0;
-        this._mayDonador = 0;
     }
 
     procesarDonador(donador: Cl_donador): void{
@@ -40,8 +39,7 @@ export default class Cl_fundacion {
                 break;
         }
 
-        // Actualizar el mayor donador
-        this._mayDonador = Math.max(this._cntDonador1, this._cntDonador2, this._cntDonador3, this._cntDonador4);
+
     }
 
     totalFinalDolares(tasaDeCambio: number): number{

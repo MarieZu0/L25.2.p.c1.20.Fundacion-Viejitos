@@ -6,7 +6,6 @@ export default class Cl_fundacion {
         this._cntDonador2 = 0;
         this._cntDonador3 = 0;
         this._cntDonador4 = 0;
-        this._mayDonador = 0;
     }
     procesarDonador(donador) {
         // Acumular los aportes en dólares y bolívares
@@ -27,8 +26,6 @@ export default class Cl_fundacion {
                 this._cntDonador4 += donador.totalEnDolares(40);
                 break;
         }
-        // Actualizar el mayor donador
-        this._mayDonador = Math.max(this._cntDonador1, this._cntDonador2, this._cntDonador3, this._cntDonador4);
     }
     totalFinalDolares(tasaDeCambio) {
         return this._acumDolares + (this._acumBolivares / tasaDeCambio);
