@@ -15,16 +15,16 @@ export default class Cl_fundacion {
         // Contar los donadores según su nombre
         switch (donador.nombre) {
             case "Sofía":
-                this._cntDonador1++;
+                this._cntDonador1 += donador.totalEnDolares(40);
                 break;
             case "Mateo":
-                this._cntDonador2++;
+                this._cntDonador2 += donador.totalEnDolares(40);
                 break;
             case "Elena":
-                this._cntDonador3++;
+                this._cntDonador3 += donador.totalEnDolares(40);
                 break;
             case "David":
-                this._cntDonador4++;
+                this._cntDonador4 += donador.totalEnDolares(40);
                 break;
         }
         // Actualizar el mayor donador
@@ -37,20 +37,20 @@ export default class Cl_fundacion {
         return this._acumBolivares + (this._acumDolares * tasaDeCambio);
     }
     mejorDonador() {
-        if (this._mayDonador === this._cntDonador1) {
+        if (this._cntDonador1 > this._cntDonador2 && this._cntDonador1 > this._cntDonador3 && this._cntDonador1 > this._cntDonador4) {
             return "Sofía";
         }
-        else if (this._mayDonador === this._cntDonador2) {
+        else if (this._cntDonador2 > this._cntDonador1 && this._cntDonador2 > this._cntDonador3 && this._cntDonador2 > this._cntDonador4) {
             return "Mateo";
         }
-        else if (this._mayDonador === this._cntDonador3) {
+        else if (this._cntDonador3 > this._cntDonador1 && this._cntDonador3 > this._cntDonador2 && this._cntDonador3 > this._cntDonador4) {
             return "Elena";
         }
-        else {
+        else if (this._cntDonador4 > this._cntDonador1 && this._cntDonador4 > this._cntDonador2 && this._cntDonador4 > this._cntDonador3) {
             return "David";
         }
-    }
-    mayorDonador() {
-        return this._mayDonador;
+        else {
+            return "Empate entre donadores";
+        }
     }
 }
