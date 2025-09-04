@@ -8,7 +8,7 @@ export default class Cl_donador {
         this._nombre = nombre;
         this._aporteDolares = aporteDolares;
         this._aporteBolivares = aporteBolivares;
-    }
+        }
 
     set nombre(nombre: string) {
         this._nombre = nombre;

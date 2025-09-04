@@ -47,11 +47,14 @@ export default class Cl_fundacion {
     mejorDonador(): string{
         if(this._mayDonador === this._cntDonador1){
             return "Sofía";
-        } else if(this._mayDonador === this._cntDonador2){
+        }
+        else if(this._mayDonador === this._cntDonador2){
             return "Mateo";
-        } else if(this._mayDonador === this._cntDonador3){
+        }
+        else if(this._mayDonador === this._cntDonador3){
             return "Elena";
-        } else {
+        }
+        else{
             return "David";
         }
     }
